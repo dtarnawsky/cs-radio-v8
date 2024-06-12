@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Select Account
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-radio-group [(ngModel)]="accountSelected" (ionChange)="radioChange()">
+    @for (account of accounts; track account) {
+    <app-item [account]="account"></app-item>
+    }
+  </ion-radio-group>
+</ion-content>
